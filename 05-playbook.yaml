@@ -1,0 +1,9 @@
+- name: variable from other file
+  hosts: localhost
+  vars_files:
+  - variable.yaml
+  tasks:
+  - name: print variables from variable file
+    ansible.builtin.debug:
+     msg: the name is :{{NAME}},DURATION is {{DURATION}}, TRAINER is {{TRAINER}}
+     
