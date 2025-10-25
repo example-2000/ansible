@@ -1,0 +1,9 @@
+- name: simple condition in playbook
+  hosts: localhost
+  vars:
+   NAME: devops
+  tasks:
+  - name: print the message
+    ansible.builtin.debug:
+     msg: "{{NAME}}"
+    when: NAME=="devops"
