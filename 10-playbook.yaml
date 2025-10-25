@@ -1,0 +1,30 @@
+- name: datatypes in ansible
+  hosts: localhost
+  vars:
+  - age: 30
+  - name: "ganesh"
+  - isdevops: true
+  - skills:
+    - devops
+    - aws
+    - docker
+  - expereince:
+    devops: 5
+    aws: 3
+    docker: 2
+  tasks:
+  - name: print the number datatype
+    ansible.builtin.debug:
+     msg: {{age}}
+  - name: print the string datatype
+    ansible.builtin.debug:
+     msg: {{name}}
+  - name: print the boolean datatype
+    ansible.builtin.debug:
+     msg: {{isdevops}}
+  - name: print the list datatype
+    ansible.builtin.debug:
+     msg: {{skills}}
+  - name: print the map datatype
+    ansible.builtin.debug:
+     msg: {{expereince}}
