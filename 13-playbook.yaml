@@ -1,0 +1,10 @@
+- name: loops in playbook
+  hosts: localhost
+  tasks:
+  - name: print the items in the loops
+    ansible.builtin.debug:
+     msg: "{{item}}"
+    loop:
+     - devops
+     - aws
+     - pradeep
