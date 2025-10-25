@@ -7,6 +7,9 @@
     ignore_errors: true
   - name: print the output
     ansible.builtin.debug:
+     msg: "{{output}}"
+  - name: print the exit status
+    ansible.builtin.debug:
      msg: "{{output.rc}}"
   - name: create roboshop user if not exist
     ansible.builtin.user:
