@@ -1,0 +1,12 @@
+- name: install packages in host server
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: install the required package
+    ansible.builtin.yum:
+     name: "{{item}}"
+     state: "installed"
+    loop:
+     - nginx
+     - mysql
+     - maven
